@@ -113,7 +113,10 @@ Pooled across all runs, raw access → with context:
 | **All** | **1 of 405 → 82%** | **40 → 8** | **27 → 7** | **36% → 2%** | **$349.73 → $93.00** | **$349.73 → $0.28** |
 
 - Context improved correctness by more than 5 points in 74 of 81 model/task pairs and lowered it in none.
-- No gain: Qwen 3.5 9B and Mistral Large 3 on all three tasks, and Sonnet 5.5 on R2.
+- No gain in median correctness: Qwen 3.5 9B and Mistral Large 3 on all three tasks, and Sonnet 5.5
+  on R2. Of these, only Qwen 3.5 9B never succeeded with context; Mistral Large 3 succeeded in 3 of 15
+  runs and Sonnet 5.5 in 1 of 5 R2 runs. 26 of 27 models succeeded at least once with context, and
+  13 succeeded on every run.
 - The one raw-access success was Fable 5 on R2, scoring 64.6 after 44 tool calls.
 - A1 unauthorized rows fell from 3,257 to 951 (−71%). Context reduces unsafe writes but does not
   prevent them.
